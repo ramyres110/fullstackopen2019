@@ -1,0 +1,30 @@
+title Creating a new note
+
+note over client:
+The client did make a 
+request and the page 
+is already loaded
+end note
+
+note over client:
+The user write the text 
+on input "Hello World from 
+Brazil" and click in "save" 
+button.
+end note
+
+client -> server: POST /new_note note=Hello World from Brazil
+server --> client: Status Code 302 with location /notes
+client -> server: GET /notes
+server --> client: HTML Page
+client -> server: GET /main.css
+server --> client: CSS file
+client -> server: GET /main.js
+server --> client: Javascript File
+
+note over client:
+The client did load the javascript script and run
+end note
+
+client -> server: GET /data.json with XHR
+server --> client: Json File

@@ -1,0 +1,15 @@
+title Open the Single Page Application
+
+client -> server: GET /spa
+server --> client: HTML Page
+client -> server: GET /main.css
+server --> client: CSS File
+client -> server: GET /spa.js
+server --> client: Javascript File
+
+note over client:
+The client did load the javascript script and run
+end note
+
+client -> server: GET /data.json
+server --> client: Json File

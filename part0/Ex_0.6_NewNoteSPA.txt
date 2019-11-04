@@ -1,0 +1,17 @@
+title New Note on Single Page Application
+
+note over client:
+The client did make a 
+request and the page 
+is already loaded
+end note
+
+note over client:
+The user write the text 
+on input "Hello World from 
+Brazil" and click in "save" 
+button.
+end note
+
+client -> server: POST /new_note_spa {"content":"Hello World from Brazil","date":"2019-11-04T04:05:30.589Z"}
+server --> client: Status Code 201 with response {"message":"note created"}
