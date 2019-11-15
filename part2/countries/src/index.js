@@ -23,22 +23,31 @@ const CountrieDetail = ({ country }) => (
     </div>
 )
 
-const Countries = ({ coutries }) => {
+const Countries = ({ coutries, showHandler }) => {
     if (coutries.length == 1)
         return <CountrieDetail country={coutries[0]} />
 
     return (coutries.length > 10) ?
         <p>To many matches, specify another filter...</p> :
-        <div>{coutries.map((country) => <p key={country.alpha2Code}>{country.name}</p>)}</div>;
+        <div>
+            {coutries.map((country) =>
+                <p key={country.alpha2Code}>
+                    {country.name} <button onClick={()=>showHandler(country.name)}>show</button>
+                </p>)}
+        </div>;
 }
 
 const App = () => {
     const url = "https://restcountries.eu/rest/v2/all";
-    const [filter, setFilter] = useState('');
+    const [filter, setFilter] = useState('bra');
     const [countries, setCountries] = useState([]);
 
     const handleInputChange = (ev) => {
         setFilter(ev.target.value);
+    }
+
+    const showHandler = (name) => {
+        setFilter(name);
     }
 
     useEffect(() => {
@@ -66,7 +75,7 @@ const App = () => {
             <hr />
             <Countries coutries={
                 countries.filter((country) => country.name.toLowerCase().indexOf(filter.toLowerCase()) >= 0)
-            } />
+            } showHandler={showHandler} />
         </div>
     );
 }
