@@ -1,0 +1,22 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.message-content{
+    background: lightgrey;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.error{
+    color: red !important;
+    border-color: red !important;
+}
+
+.success{
+    color: green !important;
+    border-color: green !important;
+}
