@@ -27,7 +27,7 @@
     {
       "content": "Minha nota",
       "date": "2019-11-16T16:09:40.982Z",
-      "important": false,
+      "important": true,
       "id": 5
     },
     {
@@ -35,6 +35,18 @@
       "date": "2019-11-16T16:55:00.741Z",
       "important": false,
       "id": 6
+    },
+    {
+      "content": "A new note...",
+      "date": "2019-11-16T19:01:38.335Z",
+      "important": false,
+      "id": 8
+    },
+    {
+      "content": "A new note...",
+      "date": "2019-11-16T19:01:50.063Z",
+      "important": true,
+      "id": 9
     }
   ]
 }
