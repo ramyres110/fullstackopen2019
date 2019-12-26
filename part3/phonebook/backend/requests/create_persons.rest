@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Ana Maria Mendonça de Meneses",
+    "number": "+5562999394832"
+}
